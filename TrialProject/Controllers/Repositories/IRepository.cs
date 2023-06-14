@@ -1,4 +1,4 @@
-﻿namespace TrialProject.Controllers.Repositories
+﻿namespace Tasks.Controllers.Repositories
 {
     public interface IRepository<T> where T : class
     {

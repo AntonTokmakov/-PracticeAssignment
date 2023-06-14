@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TechnicalSpecification>
+
+
+@if (Model == null)
+{
+    <tr>
+        <th>Нет проектов</th>
+    </tr>
+    return;
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>IdTS</th>
+            <th>ShortName</th>
+            <th>Status</th>
+            <th>Progress</th>
+            <th>Risks</th>
+            <th>Students</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var project in Model)
+        {
+            <tr>
+                <td>@project.id_ts</td>
+                <td>@project.start_date</td>
+                <td>@project.end_date</td>
+
+            </tr>
+        } 
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-namespace TrialProject.Models
+namespace Tasks.Models
 {
     public class ErrorViewModel
     {

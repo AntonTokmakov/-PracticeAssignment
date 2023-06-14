@@ -1,8 +1,7 @@
-﻿namespace TrialProject.Models
+﻿namespace Tasks.Models
 {
     public class Student : People
     {
-        public Guid Id { get; set; }
         public string Teacher { get; set; }
         public int CreatingTask { get; set; }
     }

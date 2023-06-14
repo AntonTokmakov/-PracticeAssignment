@@ -1,36 +1,36 @@
-﻿using TrialProject.Models;
+﻿using Tasks.Models;
 
-namespace TrialProject.Controllers.Repositories
+namespace Tasks.Controllers.Repositories
 {
     public class SQLProjectRepository : IRepository<Project>
     {
-        ProjectContext db;
+        private ProjectContext db;
 
-        public SQLProjectRepository()
+        public SQLProjectRepository(ProjectContext context)
         {
-            this.db = new ProjectContext();
+            this.db = context;
         }
 
         public void Create(Project project)
         {
-            db.Add(project);
+            db.project.Add(project);
         }
 
         public void Delete(int id)
         {
-            Project project = db.Projects.Find(id);
-            if (project == null)
-               db.Remove(project);
+            Project project = db.project.Find(id);
+            if (project != null)
+               db.project.Remove(project);
         }
 
         public Project GetItem(int id)
         {
-            return db.Projects.Find(id);
+            return db.project.Find(id);
         }
 
         public IEnumerable<Project> GetItemList()
         {
-            return db.Projects;
+            return db.project;
         }
 
         public void Save()
@@ -40,7 +40,7 @@ namespace TrialProject.Controllers.Repositories
 
         public void Update(Project project)
         {
-            db.Update(project);
+            db.project.Update(project);
         }
     }
 }

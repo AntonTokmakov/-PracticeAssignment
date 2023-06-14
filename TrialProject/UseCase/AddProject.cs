@@ -1,4 +1,4 @@
-﻿namespace TrialProject.UseCase
+﻿namespace Tasks.UseCase
 {
     public class AddProject
     {

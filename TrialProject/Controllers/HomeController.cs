@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Tasks.Controllers.Repositories;
+using Tasks.Models;
 using TrialProject.Controllers.Repositories;
 using TrialProject.Models;
 
-namespace TrialProject.Controllers
+namespace Tasks.Controllers
 {
     public class HomeController : Controller
     {
@@ -28,7 +30,9 @@ namespace TrialProject.Controllers
 
         public IActionResult ViewAllProject()
         {
-
+            UnitOfWork db = new UnitOfWork();
+            var technicalSpecification = db.TechnicalSpecification.GetItemList();
+            return View(technicalSpecification);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
