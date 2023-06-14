@@ -5,7 +5,7 @@ using Tasks.Models;
 using TrialProject.Controllers.Repositories;
 using TrialProject.Models;
 
-namespace Tasks.Controllers
+namespace Tasks.Models
 {
     public class HomeController : Controller
     {

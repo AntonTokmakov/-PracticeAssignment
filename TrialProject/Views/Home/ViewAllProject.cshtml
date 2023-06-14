@@ -1,4 +1,5 @@
-﻿@model IEnumerable<TechnicalSpecification>
+﻿@using TrialProject.Models;
+@model IEnumerable<TechnicalSpecification>
 
 
 @if (Model == null)
@@ -29,7 +30,6 @@
                 <td>@project.id_ts</td>
                 <td>@project.start_date</td>
                 <td>@project.end_date</td>
-
             </tr>
         } 
     </tbody>
