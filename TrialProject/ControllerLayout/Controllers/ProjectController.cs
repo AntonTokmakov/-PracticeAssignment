@@ -10,6 +10,7 @@ namespace Tasks.Models
 {
     public class ProjectController : Controller
     {
+        // вот этот класс не инициализируектся
         IProjectService _projectService;
 
         public ProjectController(IProjectService projectService)
@@ -29,7 +30,7 @@ namespace Tasks.Models
                 id_status = projectDto.id_status
             };
             _projectService.AddProject(project);
-            return RedirectToAction("GetProjects");
+            return View();
         }
 
         public IActionResult GetProjects()

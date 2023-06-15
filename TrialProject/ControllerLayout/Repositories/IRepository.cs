@@ -1,4 +1,6 @@
-﻿namespace Tasks.Controllers.Repositories
+﻿using Tasks.Models;
+
+namespace Tasks.Controllers.Repositories
 {
     public interface IRepository<T> where T : class
     {
